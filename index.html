@@ -1,0 +1,183 @@
+<!Doctype HTML>
+<html lang="ja">
+    <script>
+        
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+    </script>
+    <title>VinVox</title>
+    <head>
+        <link rel="icon" href="go.png">
+    </head>
+        <body bgcolor="white" text="grey">
+            <meta charset="utf-8">
+            <meta name="viewport">
+            <meta http-equiv="X-UA-Compatible" content="ie-edge">
+            <style>
+                h2{color:rgb(211, 7, 7)}
+                h3{color:red}
+                img{height: 348px;}
+                b{color:gray}
+                a{color:rgb(65, 65, 65)}
+                p{color:grey}
+                </style>
+              <h2>VINVOX</h2>
+              <h3>Site updated every 2 weeks due to school</h3>
+              <a href="https://vinvox.newgrounds.com/movies">
+              <img src="lha.png" alt="Problem with image couldn't load :(">
+            </a>
+              <br/>
+              <b>Information</b>
+              <br/>
+              <a href="https://vinvox.newgrounds.com/news">News</a>
+              <br/>
+              <a href="https://vinvox.newgrounds.com/games">Games</a>
+              <br/>
+              <a href="https://vinvox.newgrounds.com/art">Art</a>
+              <br/>
+              <a href="https://vinvox.newgrounds.com/movies">Animations</a>
+              <br/>
+              <br/>
+              <b>News</b>
+              <br/>
+              hello welcome to VinVox.io
+              <br/>
+              this site is mainly used for games
+              <BR/>
+              new and art and for personal use anyway enjoy the site
+              <br/>
+              and the links will redirect you to where we post all of our main stuff
+              <br/>
+              I also co-founded a game studio called LoonCadets
+              <br/>
+              we make games, animations and comics is what our studio does
+              <br/>
+              and I have the links to my and LoonCadets socials and yeah thats pretty much it bye.
+              <br/>
+              <br/>
+              <b>Personal news</b>
+              <br/>
+              Mainly whats going on with me?
+              <br/>
+              well if your asking i'm going to school which is going to be done in May
+              <br/>
+              sometimes I visit my family in Gallup but I live in Albuquerque so it takes me about 2 hours
+              <br/>
+              to get down to Gallup and yeah that is about it for what is about me enjoy the site bye.
+              <br/>
+              <br/>
+              <b>projects</b>
+              <br/>
+              I have about 5 other games coming out this year
+              <br/>
+              along with like 3 animations and if your wondering where I post
+              <br/>
+              my project you can find my account <a href="https://vinvox.newgrounds.com">here</a>
+              <br/>
+              but if you just want to explore the site I use you can find that <a href="https://www.newgrounds.com">here</a>
+              <br/>
+              enjoy that site as well anyways thats it pretty much enjoy bye.
+              <br/>
+              <br/>
+              <b>News about LoonCadets</b>
+              <br/>
+              LoonCadets the games studio/animation studio I co-founded and we have alot of socials but the main ones we use 
+              <br/>
+              the most are Instagram, Discord and Newgrounds are the places you can find us at the most
+              <br/>
+              and you can contact the founder <a href="https://www.newgrounds.com/pm/send/itskkchen">here</a>
+              <br/>
+              and you can contact me <a href="https://www.newgrounds.com/pm/send/vinvox">here</a> if you need to
+              <br/>
+              and the other co-founder <a href="https://www.newgrounds.com/pm/send/firewolf666777333111">here</a>
+              <br/>
+              we have 1 game coming out in 2023 and an animation but we don't now when it will come
+              <br/>
+              out yet but It'll come out when ever it comes out and I'll let you now when it is out 
+              <br/>
+              and thats it for this post enjoy bye.
+              <br/>
+              <br/>
+              <b>Links/Socials</b>
+              <br/>
+              <a href="https://vinvox.newgrounds.com">My Newgrounds</a>
+              <br/>
+              <a href="https://looncadets.newgrounds.com">LoonCadets Newgrounds</a>
+              <br/>
+              <a href="https://instagram.com/vinvoxng">My instagram</a>
+              <br/>
+              <a href="https://instagram.com/looncadets">LoonCadets instagram</a>
+              <br/>
+              <a href="https://discord.gg/9G7HBUYCvy">our discord</a>
+              <br/>
+              <a href="https://ItsKKChen.github.io">LoonCadets website</a>
+              <br/>
+              <br/>
+              <p>Copyright VinVox 2022-present all rights reserved</p>
+        </body>
+    </head>
+</html>
