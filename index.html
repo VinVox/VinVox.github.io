@@ -1,0 +1,196 @@
+<!Doctype HTML>
+<html lang="ja">
+<script>
+        (function() {
+        class RuffleMimeType {
+            constructor(a, b, c) {
+                this.type = a, this.description = b, this.suffixes = c
+            }
+        }
+        class RuffleMimeTypeArray {
+            constructor(a) {
+                this.__mimetypes = [], this.__named_mimetypes = {};
+                for (let b of a) this.install(b)
+            }
+            install(a) {
+                let b = this.__mimetypes.length;
+                this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+            }
+            item(a) {
+                return this.__mimetypes[a]
+            }
+            namedItem(a) {
+                return this.__named_mimetypes[a]
+            }
+            get length() {
+                return this.__mimetypes.length
+            }
+        }
+        class RufflePlugin extends RuffleMimeTypeArray {
+            constructor(a, b, c, d) {
+                super(d), this.name = a, this.description = b, this.filename = c
+            }
+            install(a) {
+                a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+            }
+        }
+        class RufflePluginArray {
+            constructor(a) {
+                this.__plugins = [], this.__named_plugins = {};
+                for (let b of a) this.install(b)
+            }
+            install(a) {
+                let b = this.__plugins.length;
+                this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+            }
+            item(a) {
+                return this.__plugins[a]
+            }
+            namedItem(a) {
+                return this.__named_plugins[a]
+            }
+            get length() {
+                return this.__plugins.length
+            }
+        }
+        const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+        function install_plugin(a) {
+            navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+                value: new RufflePluginArray(navigator.plugins),
+                writable: !1
+            }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+                value: new RuffleMimeTypeArray(navigator.mimeTypes),
+                writable: !1
+            });
+            for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+        }
+        install_plugin(FLASH_PLUGIN);
+    })();
+</script>
+<head>
+<link rel="icon" href="slimy.png">
+</head>
+<!--main-->
+<head>
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-140143751-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140143751-1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=960">
+<meta name="Keywords" content="ユーフォーテーブル,VinVox,クレイ,アニメーション,サイト構築,映像,プロダクション">
+<meta name="Description" content="アニメーションと実写、そしてCGを手掛ける総合映像プロダクション。インターネット業務、携帯電話コンテンツ作成なども行います。">
+<title>VinVox</title>
+<meta property="og:title" content="VinVox">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" href="svwp_style.css" type="text/css" media="screen">
+</head>
+<body>
+<div id="wrapper">
+<!-- WRAPPER start -->
+<!-- HEADER start -->
+<div id="header">
+<!-- LOGO start -->
+<!-- <div id="logo_space">
+<a href="index.html"><img src="vinvox_logo.png" alt="Creator`s Office vinvox"></a>
+</div> -->
+<div id="logo_space-temp">
+<ul id="Vinlogo-temp">
+<a href="index.html" title="Creator's Office vinvox"></a></li>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="wrapper" style="width: 960px; margin: 0 auto;">
+<div id="wrapper" style="height: 260px; margin: 0 auto;">
+<div id="header">
+<div style="float: right;"><a href="index.html"><img src="vinvox_logo.png" alt="creators office vinvox"></a></div>
+</div>
+</div>
+</div>
+<!-- LOGO end -->
+</div>
+<!-- HEADER end -->
+<!-- MENUS start -->
+<div id="menu-trig">
+<div class="menu-trigger" href="#">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div id="menubar">
+<div id="globalnavi">
+<ul>
+<li class="home"><a href="index.html" title="ホーム">HOME</a>
+</li>
+<li class="news"><a href="https://vinvox.newgrounds.com/news" title="ホーム">News</a>
+</li>
+<li class="animations"><a href="https://vinvox.newgrounds.com/movies" title="ホーム">Animations</a>
+</li>
+<li class="art"><a href="https://vinvox.newgrounds.com/art" title="ホーム">Art</a>
+</li>
+<li class="games"><a href="https://vinvox.newgrounds.com/games" title="ホーム">Games</a>
+</li>
+</ul>
+<!-- MENUS end -->
+<div style="margin-top:30px;margin-bottom:20px;"><a style="text-decoration:none;color:red;font-size:20px;" href="https://vinvox.newgrounds.com/news">
+<a style="text-decoration:none;color:red;font-size:20px;" href="https://vinvox.newgrounds.com/news">
+<h3 style="text-align:center;border:3px solid red;padding:5px;">新型コロナウイルス感染症に伴う各店舗からのお知らせ</h3>
+</a>
+<div id="information">
+<div class="boxtitle">
+<p>INFORMATION</p>
+</div>
+<div id="inforbox">
+<div class="news-content">
+Hello and welcome to the vinvox website
+<br/>
+here we make games art and animations I also co-founded a studio called looncadets
+<br/>
+you can find the site for that <a href="https://itskkchen.github.io">here</a>
+<br/>
+and the rest of our socials are down below
+<br/>
+need to contact us? you can contact us <a href="https://www.newgrounds.com/pm/send/vinvox">here</a> or <a href="https://www.newgrounds.com/pm/send/looncadets">here</a>
+<br/>
+and yeah we have upcoming games and others and check our news to see when the games release
+<br/>
+along with that we also have a few animations coming out as well
+<br/>
+and yeah thats about it enjoy the site bye.
+<br/>
+<br/>
+<div id="socials">
+<div class="boxtitle">
+<p>SOCIALS</p>
+</div>
+<div id="inforbox">
+<div class="news-content">
+<a href="https://instagram.com/vinvoxng">My Instagram</a>
+<br/>
+<a href="https://vinvox.newgrounds.com">My Newgrounds</a>
+<br/>
+<a href="https://looncadets.newgrounds.com">LoonCadets Newgrounds</a>
+<br/>
+<a href="https://instagram.com/looncadets">LoonCadets Instagram</a>
+<br/>
+<a href="https://discord.gg/9G7HBUYCvy">Our Discord</a>
+</li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
